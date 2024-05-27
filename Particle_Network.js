@@ -1,10 +1,12 @@
 const robot = require('robotjs')
 
 function click_send(){
+    //这里设置你的发送处的坐标（若不对的话）
     robot.moveMouseSmooth(1550,590);
     robot.mouseClick();
 }
 function address(address){
+    //这里设置你的地址处的坐标（若不对的话）
     robot.moveMouseSmooth(1580,500);
     robot.mouseClick();
     robot.typeString(address);
@@ -16,6 +18,7 @@ function getRandomNumber(min, max, decimalPlaces) {
     return randomNumber;
   }
 function money(){
+    //这里设置你的金额处的坐标（若不对的话）
     robot.moveMouseSmooth(1580,620);
     robot.mouseClick();
     robot.typeString(getRandomNumber(0.00001,0.00008,6));
@@ -40,6 +43,7 @@ async function run(){
     robot.mouseClick()
     robot.moveMouseSmooth(1620,920)
     robot.mouseClick()
+    //以上不需要可以注释
     for(var i = 0; i < 100; i++){
         console.log("已完成：" + (i + 1)+"次");
         //点击send
